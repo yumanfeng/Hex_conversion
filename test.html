@@ -1,15 +1,63 @@
+<!---------
+--介绍：1、可计算2至62进制，数字表示（10~35 ：A~Z；36~61 ：a~z）
+--------2、n进制到n进制的转换
+--------3、支持整数和浮点数（负数正在完善）
+--------4、支持不同进制数进行求和
+-->
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <script src="test.js"></script>
-    <link href="test.css" type="text/css">
+    <script type="javascript" src="jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="test.js"></script>
+    <link href="test.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    <p>第一个数的值：<input type="text" id="number1">和进制：<input type="text" id="hex1"></p>
-    <p>第二个数的值：<input type="text" id="number2">和进制：<input type="text" id="hex2"></p>
-    输出值的进制：<input type="text" id="hex3"><input type="button" value="求合" onclick="sum()">
-    <input type="button" value="测试按钮" onclick="nToTen(4,5)">
+
+<div id="change">
+    <div id="changeLeft">
+        <p class="changeLineHeight">进制</p>
+        <input type="text" id="hex4" class="changeLineHeight"><!--<textarea id="hex4" class="changeLineHeight"></textarea>-->
+        <input type="text" id="hex5" class="changeLineHeight"><!--<textarea id="hex5" class="changeLineHeight"></textarea>-->
+    </div>
+    <div id="changeButton">
+        <input type="button" value="转换" onclick="change()">
+    </div>
+    <div id="changeRight">
+        <p class="changeLineHeight">数</p>
+        <input type="text" id="number4" class="changeLineHeight"><!--<textarea id="number4" class="changeLineHeight"></textarea>-->
+        <input type="text" id="number5" class="changeLineHeight"><!--<textarea id="number5" class="changeLineHeight"></textarea>-->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="sum">
+    <div id="sumButton">
+        <input type="button" value="求合" onclick="sum()">
+    </div>
+    <div id="sumMiddle">
+        <p class="sumLineHeight">进制</p>
+        <input type="text" id="hex1" class="sumLineHeight"><!--<textarea id="hex1" class="sumLineHeight"></textarea>-->
+        <input type="text" id="hex2" class="sumLineHeight"><!--<textarea id="hex2" class="sumLineHeight"></textarea>-->
+        <input type="text" id="hex3" class="sumLineHeight"> <!--<textarea id="hex3" class="sumLineHeight"></textarea>-->
+    </div>
+    <div id="sumRight">
+        <p class="sumLineHeight">数</p>
+        <input type="text" id="number1" class="sumLineHeight"><!--<textarea id="number1" class="sumLineHeight"></textarea>-->
+        <input type="text" id="number2" class="sumLineHeight"><!--<textarea id="number2" class="sumLineHeight"></textarea>-->
+        <input type="text" id="number3" class="sumLineHeight"><!--<textarea id="number3" class="sumLineHeight"></textarea>-->
+    </div>
+
+    <!--<input type="button" value="测试按钮" onclick="nToTen(4,5)">-->
+</div>
 </body>
 </html>
